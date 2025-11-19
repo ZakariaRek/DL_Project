@@ -1,0 +1,815 @@
+/* ========================================
+   🍊 STYLES FOR ORANGE DISEASE DETECTION
+   Updated with Media Results Section
+   ======================================== */
+
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --primary: #f97316;
+    --primary-dark: #ea580c;
+    --secondary: #10b981;
+    --danger: #ef4444;
+    --warning: #f59e0b;
+    --info: #3b82f6;
+    --dark: #1f2937;
+    --light: #f3f4f6;
+    --border: #e5e7eb;
+  }
+  
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--dark);
+    background-color: #fff;
+  }
+  
+  .App {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* ==================== HEADER ==================== */
+  .header {
+    background: #fff;
+    border-bottom: 1px solid var(--border);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
+  
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .orange-icon {
+    font-size: 2rem;
+  }
+  
+  .logo h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+  }
+  
+  .nav {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .nav a:hover {
+    color: var(--primary);
+  }
+  
+  /* ==================== HERO ==================== */
+  .hero {
+    background: linear-gradient(135deg, #ff9a56 0%, #ff6b35 100%);
+    color: white;
+    padding: 5rem 0;
+    text-align: center;
+  }
+  
+  .hero-title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 3rem;
+    opacity: 0.95;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .stat {
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    padding: 1.5rem;
+    border-radius: 12px;
+  }
+  
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+  }
+  
+  .stat-label {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    opacity: 0.9;
+  }
+  
+  /* ==================== SECTIONS ==================== */
+  .about, .features, .upload-section {
+    padding: 5rem 0;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--dark);
+  }
+  
+  /* ==================== ABOUT ==================== */
+  .about {
+    background: var(--light);
+  }
+  
+  .about-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+  
+  .about-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .about-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+  
+  .about-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+  }
+  
+  .about-card p {
+    color: #6b7280;
+    line-height: 1.8;
+  }
+  
+  /* ==================== FEATURES ==================== */
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  .feature {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .feature h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: var(--dark);
+  }
+  
+  .feature p {
+    color: #6b7280;
+  }
+  
+  /* ==================== UPLOAD SECTION ==================== */
+  .upload-section {
+    background: var(--light);
+  }
+  
+  .upload-container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .upload-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    margin-bottom: 2rem;
+  }
+  
+  .upload-area {
+    margin-bottom: 1.5rem;
+  }
+  
+  .file-input {
+    display: none;
+  }
+  
+  .file-label {
+    display: block;
+    border: 2px dashed var(--border);
+    border-radius: 12px;
+    padding: 3rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .file-label:hover {
+    border-color: var(--primary);
+    background: #fff7ed;
+  }
+  
+  .upload-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .upload-icon {
+    font-size: 3rem;
+  }
+  
+  .upload-placeholder p {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--dark);
+  }
+  
+  .upload-placeholder span {
+    color: #6b7280;
+    font-size: 0.875rem;
+  }
+  
+  .preview {
+    max-width: 100%;
+    max-height: 400px;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  
+  .preview img,
+  .preview video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  .file-info {
+    background: var(--light);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .file-info p {
+    margin: 0.25rem 0;
+    font-size: 0.875rem;
+  }
+  
+  .button-group {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .btn {
+    flex: 1;
+    padding: 0.875rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  .btn-primary {
+    background: var(--primary);
+    color: white;
+  }
+  
+  .btn-primary:hover:not(:disabled) {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
+  }
+  
+  .btn-secondary {
+    background: var(--light);
+    color: var(--dark);
+  }
+  
+  .btn-secondary:hover:not(:disabled) {
+    background: #e5e7eb;
+  }
+  
+  .btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  .spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #ffffff60;
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+  }
+  
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  
+  /* ==================== RESULTS ==================== */
+  .result-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    animation: fadeIn 0.5s;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .result-card h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    color: var(--dark);
+  }
+  
+  .result-card h4 {
+    font-size: 1.25rem;
+    margin: 2rem 0 1rem 0;
+    color: var(--dark);
+  }
+  
+  .result-card h5 {
+    font-size: 1.1rem;
+    margin: 1rem 0 0.75rem 0;
+    color: var(--dark);
+    font-weight: 600;
+  }
+  
+  .error-card {
+    border-left: 4px solid var(--danger);
+    background: #fef2f2;
+  }
+  
+  .error-card h3 {
+    color: var(--danger);
+  }
+  
+  /* ==================== IMAGE RESULT ==================== */
+  .result-main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .disease-badge {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 3px solid;
+  }
+  
+  .disease-emoji {
+    font-size: 3rem;
+  }
+  
+  .disease-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  
+  .disease-status {
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  
+  .confidence-display {
+    text-align: center;
+  }
+  
+  .confidence-label {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  
+  .confidence-value {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--dark);
+    margin-bottom: 0.75rem;
+  }
+  
+  .confidence-bar {
+    width: 100%;
+    height: 12px;
+    background: var(--light);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  
+  .confidence-fill {
+    height: 100%;
+    transition: width 0.5s ease;
+    border-radius: 6px;
+  }
+  
+  .probabilities {
+    margin: 2rem 0;
+  }
+  
+  .probabilities h4 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--dark);
+  }
+  
+  .prob-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .prob-item {
+    display: grid;
+    grid-template-columns: 100px 1fr 60px;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .prob-name {
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+  
+  .prob-bar-container {
+    height: 24px;
+    background: var(--light);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  .prob-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+    transition: width 0.5s ease;
+    border-radius: 12px;
+  }
+  
+  .prob-value {
+    text-align: right;
+    font-weight: 600;
+  }
+  
+  /* ==================== VIDEO RESULT ==================== */
+  .video-summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .summary-item {
+    text-align: center;
+    padding: 1.5rem;
+    background: var(--light);
+    border-radius: 12px;
+  }
+  
+  .summary-label {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-bottom: 0.5rem;
+  }
+  
+  .summary-value {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary);
+  }
+  
+  .health-score {
+    margin: 2rem 0;
+    text-align: center;
+  }
+  
+  .health-score h4 {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .health-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .health-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 6px solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: white;
+  }
+  
+  .health-emoji {
+    font-size: 2.5rem;
+  }
+  
+  .health-percentage {
+    font-size: 1.5rem;
+    font-weight: 800;
+  }
+  
+  .health-status {
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  
+  .disease-stats {
+    margin: 2rem 0;
+  }
+  
+  .disease-stats h4 {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .disease-stat {
+    margin-bottom: 1.5rem;
+  }
+  
+  .stat-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+  }
+  
+  .stat-disease {
+    font-weight: 700;
+  }
+  
+  .stat-count {
+    color: #6b7280;
+  }
+  
+  .stat-bar-container {
+    height: 32px;
+    background: var(--light);
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+  }
+  
+  .stat-bar {
+    height: 100%;
+    transition: width 0.5s ease;
+    border-radius: 16px;
+  }
+  
+  .stat-details {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.875rem;
+    color: #6b7280;
+  }
+  
+  .detections-table {
+    margin: 2rem 0;
+    overflow-x: auto;
+  }
+  
+  .detections-table h4 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  
+  .detections-table table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .detections-table th {
+    background: var(--light);
+    padding: 0.75rem;
+    text-align: left;
+    font-weight: 600;
+    border-bottom: 2px solid var(--border);
+  }
+  
+  .detections-table td {
+    padding: 0.75rem;
+    border-bottom: 1px solid var(--border);
+  }
+  
+  .disease-tag {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+  
+  .table-footer {
+    text-align: center;
+    margin-top: 1rem;
+    color: #6b7280;
+    font-style: italic;
+  }
+  
+  /* ==================== MEDIA RESULTS (NEW) ==================== */
+  .media-results {
+    margin: 3rem 0 2rem 0;
+    padding-top: 2rem;
+    border-top: 2px solid var(--border);
+  }
+  
+  .media-results h4 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: var(--dark);
+    text-align: center;
+  }
+  
+  .media-section {
+    margin-bottom: 3rem;
+    padding: 1.5rem;
+    background: var(--light);
+    border-radius: 12px;
+  }
+  
+  .media-section h5 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: var(--dark);
+    font-weight: 600;
+  }
+  
+  .media-preview {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
+  }
+  
+  .analysis-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+  }
+  
+  .annotated-video {
+    width: 100%;
+    max-height: 600px;
+    display: block;
+    border-radius: 8px;
+  }
+  
+  .download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .download-btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
+  }
+  
+  /* ==================== RESULT META ==================== */
+  .result-meta {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.875rem;
+    color: #6b7280;
+  }
+  
+  /* ==================== FOOTER ==================== */
+  .footer {
+    background: var(--dark);
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: auto;
+  }
+  
+  .footer p {
+    margin: 0.5rem 0;
+  }
+  
+  /* ==================== RESPONSIVE ==================== */
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2rem;
+    }
+  
+    .hero-subtitle {
+      font-size: 1rem;
+    }
+  
+    .section-title {
+      font-size: 2rem;
+    }
+  
+    .nav {
+      gap: 1rem;
+    }
+  
+    .button-group {
+      flex-direction: column;
+    }
+  
+    .result-main {
+      grid-template-columns: 1fr;
+    }
+  
+    .prob-item {
+      grid-template-columns: 80px 1fr 50px;
+    }
+  
+    .annotated-video {
+      max-height: 400px;
+    }
+  
+    .media-section {
+      padding: 1rem;
+    }
+  }
